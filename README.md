@@ -1,6 +1,12 @@
 # calculator
 this is the first lab given to us
-## How to run 
+## How to use the calculator
+to use the cli version of the calculator make sure you the all the neccessary requirements the run the main.py with a subcommand under the operators like divide withe the numbers 4 and 5 in the example below
+
+```bash
+uv run main.py divide 4 5
+```
+## How to run the code
 check the instructions from [how to run file](./setup.md)
 ## Assignments
 
