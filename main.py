@@ -5,7 +5,7 @@ from rich import print
 from rich.console import Console
 from rich.table import Table
 import utils.operators as operators  # <- clearer alias
-
+import utils.adOps as ap
 app = typer.Typer()
 console = Console()
     
@@ -270,6 +270,35 @@ def ops_list():
             table.add_row(n)
     console.print(table)
 
+@app.command()
+def sqrt(a:int):
+    table = Table("operation", "answer")
+    table.add_row(f"{str(a)}", str(ap.squre_root(a)))
+    console.print(table)
+
+@app.command()
+def sine(a:int):
+    table = Table("operation", "answer")
+    table.add_row(f"{str(a)}", str(ap.sine(a)))
+    console.print(table)
+
+@app.command()
+def cosine(a:int):
+    table = Table("operation", "answer")
+    table.add_row(f"{str(a)}", str(ap.cosine(a)))
+    console.print(table)  
+
+@app.command()
+def tangent(a:int):
+    table = Table("operation", "answer")
+    table.add_row(f"{str(a)}", str(ap.tanget(a)))
+    console.print(table)
+
+@app.command()
+def logarithm(a:int):
+    table = Table("operation", "answer")
+    table.add_row(f"{str(a)}", str(ap.logarithm(a)))
+    console.print(table)  
 
 if __name__ == "__main__":
     app()

@@ -1,3 +1,4 @@
+import math
 #advanced operators like square roots
 def power(x,y):
     return x ** y
